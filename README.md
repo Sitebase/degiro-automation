@@ -1,7 +1,7 @@
 # DeGiro Automation
 This repository helps you to easily setup automated asset buying through [DeGiro](https://www.degiro.nl/start-met-beleggen?id=8970B176&utm_source=mgm).
 One highly requested feature for the DeGiro is the automated buying of stocks on a recurring basis.
-This makes investing money in ETFs a hands of process, which will take the emotion out of it and will probably result in higher yields in the long run.
+This makes investing money in ETFs a hands off process, which will take the emotion out of it and will probably result in higher yields in the long run.
 
 No coding and no hosting is required to get this script running. This repository makes use of
 Github actions to run the code. Setting this up should only take 5 minutes.
