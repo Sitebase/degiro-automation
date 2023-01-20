@@ -1,0 +1,23 @@
+{
+  "name": "degiro-automation",
+  "version": "0.0.1",
+  "description": "Automated investing on DeGiro",
+  "type": "module",
+  "engines": {
+    "npm": "8",
+    "node": "17"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "order": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wim Mostmans <wim@sitebase.be>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "degiro-api": "^1.0.4",
+    "lodash.find": "^4.6.0",
+    "lodash.get": "^4.4.2"
+  }
+}
