@@ -1,0 +1,35 @@
+name: Order
+
+on:
+  schedule:
+    - cron: '1 */4 */30 * *'
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: "Install packages"
+        run: npm install
+
+      - name: "Process order"
+        run: npm run order
+        env:
+          FORCE_COLOR: 2
+          DEGIRO_USER: ${{ secrets.DEGIRO_USER }}
+          DEGIRO_PWD: ${{ secrets.DEGIRO_PWD }}
+          MAX_ORDER_VALUE: ${{ secrets.MAX_ORDER_VALUE }}
+          PRODUCT_ID: ${{ secrets.PRODUCT_ID }}
+          CURRENCY: ${{ secrets.CURRENCY }}
+          TRADE: ${{ secrets.TRADE }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Logged new order
