@@ -44,6 +44,3 @@ All suggestions on how we can improve this project are welcome. Feel free to cre
 * This repository is based on an unofficial API of DeGiro. This means that this can potentially break in the future resulting in no more orders getting executed.
 * I'm not responsible for any flaws in this repository. At the end this code is trading with real money so use it at your own risk.
 
-## Buy me a coffee
-Other companies ask a 1% portfolio fee on an annual basis for such an automation.
-You can decide yourself what it's worth to you.
